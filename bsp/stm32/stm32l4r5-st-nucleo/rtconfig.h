@@ -74,6 +74,12 @@
 
 /* Device virtual file system */
 
+#define RT_USING_DFS
+#define DFS_USING_WORKDIR
+#define DFS_FILESYSTEMS_MAX 4
+#define DFS_FILESYSTEM_TYPES_MAX 3
+#define DFS_FD_MAX 16
+#define RT_USING_DFS_DEVFS
 
 /* Device Drivers */
 
@@ -82,6 +88,7 @@
 #define RT_USING_SERIAL
 #define RT_SERIAL_RB_BUFSZ 64
 #define RT_USING_PIN
+#define RT_USING_MTD_NOR
 
 /* Using USB */
 
@@ -139,6 +146,20 @@
 
 /* system packages */
 
+#define PKG_USING_FAL
+#define FAL_DEBUG_CONFIG
+#define FAL_DEBUG 1
+#define FAL_PART_HAS_TABLE_CFG
+#define PKG_USING_FAL_LATEST_VERSION
+#define PKG_FAL_VER_NUM 0x99999
+#define PKG_USING_LITTLEFS
+#define PKG_USING_LITTLEFS_V205
+#define LFS_READ_SIZE 256
+#define LFS_PROG_SIZE 256
+#define LFS_BLOCK_SIZE 8192
+#define LFS_CACHE_SIZE 256
+#define LFS_BLOCK_CYCLES 0
+#define LFS_LOOKAHEAD_MAX 128
 
 /* peripheral libraries and drivers */
 
@@ -164,6 +185,7 @@
 #define BSP_USING_GPIO
 #define BSP_USING_UART
 #define BSP_USING_LPUART1
+#define BSP_USING_ON_CHIP_FLASH
 
 /* Board extended module Drivers */
 
