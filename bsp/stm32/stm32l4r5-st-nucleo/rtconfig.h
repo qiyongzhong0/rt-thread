@@ -79,6 +79,18 @@
 #define DFS_FILESYSTEMS_MAX 4
 #define DFS_FILESYSTEM_TYPES_MAX 3
 #define DFS_FD_MAX 16
+#define RT_USING_DFS_ELMFAT
+
+/* elm-chan's FatFs, Generic FAT Filesystem Module */
+
+#define RT_DFS_ELM_CODE_PAGE 437
+#define RT_DFS_ELM_WORD_ACCESS
+#define RT_DFS_ELM_USE_LFN_3
+#define RT_DFS_ELM_USE_LFN 3
+#define RT_DFS_ELM_MAX_LFN 255
+#define RT_DFS_ELM_DRIVES 2
+#define RT_DFS_ELM_MAX_SECTOR_SIZE 4096
+#define RT_DFS_ELM_REENTRANT
 #define RT_USING_DFS_DEVFS
 
 /* Device Drivers */
@@ -92,6 +104,14 @@
 
 /* Using USB */
 
+#define RT_USING_USB_DEVICE
+#define RT_USBD_THREAD_STACK_SZ 1024
+#define USB_VENDOR_ID 0x0FFE
+#define USB_PRODUCT_ID 0x0001
+#define RT_USB_DEVICE_COMPOSITE
+#define RT_USB_DEVICE_NONE
+#define RT_USB_DEVICE_MSTORAGE
+#define RT_USB_MSTORAGE_DISK_NAME "filesystem"
 
 /* POSIX layer and C standard library */
 
@@ -156,7 +176,7 @@
 #define PKG_USING_LITTLEFS_V205
 #define LFS_READ_SIZE 256
 #define LFS_PROG_SIZE 256
-#define LFS_BLOCK_SIZE 8192
+#define LFS_BLOCK_SIZE 4096
 #define LFS_CACHE_SIZE 256
 #define LFS_BLOCK_CYCLES 0
 #define LFS_LOOKAHEAD_MAX 128
@@ -186,6 +206,7 @@
 #define BSP_USING_UART
 #define BSP_USING_LPUART1
 #define BSP_USING_ON_CHIP_FLASH
+#define BSP_USING_USBD
 
 /* Board extended module Drivers */
 

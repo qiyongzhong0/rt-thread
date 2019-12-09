@@ -11,13 +11,13 @@
 
 #define FS_PARTITION_NAME		"filesystem"
 #define FS_PATH_NAME			"/"
-#define FS_TYPE_NAME			"lfs"
+#define FS_TYPE_NAME			"elm"
 
 static int mount_disk(void)
 {	
     fal_init();//初始化 fal 
     
-    if (fal_mtd_nor_device_create(FS_PARTITION_NAME) == NULL)//如果生成 block 设备失败
+    if (fal_blk_device_create(FS_PARTITION_NAME) == NULL)//如果生成 block 设备失败
     {
         LOG_E("Can't create a block device on '%s' partition.", FS_PARTITION_NAME);
         return(RT_ERROR);
