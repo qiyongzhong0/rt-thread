@@ -1,0 +1,2 @@
+---- power_status_pin Matches (1 in 1 files) ----
+At_device_bc26.h (packages\at_device-v2.0.1\class\bc26):    int power_status_pin;

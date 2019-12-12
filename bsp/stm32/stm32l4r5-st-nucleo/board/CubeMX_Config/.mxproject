@@ -1,7 +1,7 @@
 [PreviousGenFiles]
-HeaderPath=E:/Work/GitLib/rt-thread/bsp/stm32/stm32l4r5-st-nucleo/board/CubeMX_Config/Inc
+HeaderPath=E:/Work/GitLib/rt-thread/rt-thread/bsp/stm32/stm32l4r5-st-nucleo/board/CubeMX_Config/Inc
 HeaderFiles=stm32l4xx_it.h;stm32l4xx_hal_conf.h;main.h;gpio.h;adc.h;iwdg.h;lptim.h;usart.h;rtc.h;spi.h;tim.h;usb_otg.h;
-SourcePath=E:/Work/GitLib/rt-thread/bsp/stm32/stm32l4r5-st-nucleo/board/CubeMX_Config/Src
+SourcePath=E:/Work/GitLib/rt-thread/rt-thread/bsp/stm32/stm32l4r5-st-nucleo/board/CubeMX_Config/Src
 SourceFiles=stm32l4xx_it.c;stm32l4xx_hal_msp.c;main.c;gpio.c;adc.c;iwdg.c;lptim.c;usart.c;rtc.c;spi.c;tim.c;usb_otg.c;
 
 [PreviousLibFiles]
