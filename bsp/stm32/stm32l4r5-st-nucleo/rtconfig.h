@@ -74,6 +74,12 @@
 
 /* Device virtual file system */
 
+#define RT_USING_DFS
+#define DFS_USING_WORKDIR
+#define DFS_FILESYSTEMS_MAX 2
+#define DFS_FILESYSTEM_TYPES_MAX 2
+#define DFS_FD_MAX 16
+#define RT_USING_DFS_DEVFS
 
 /* Device Drivers */
 
@@ -86,12 +92,15 @@
 #define RT_SERIAL_USING_DMA
 #define RT_SERIAL_RB_BUFSZ 64
 #define RT_USING_PIN
+#define RT_USING_RTC
 
 /* Using USB */
 
 
 /* POSIX layer and C standard library */
 
+#define RT_USING_LIBC
+#define RT_USING_POSIX
 
 /* Network */
 
@@ -102,7 +111,8 @@
 /* protocol stack implement */
 
 #define SAL_USING_AT
-#define SAL_SOCKETS_NUM 16
+#define SAL_USING_TLS
+#define SAL_USING_POSIX
 
 /* Network interface device */
 
@@ -120,6 +130,7 @@
 /* AT commands */
 
 #define RT_USING_AT
+#define AT_DEBUG
 #define AT_USING_CLIENT
 #define AT_CLIENT_NUM_MAX 1
 #define AT_USING_SOCKET
@@ -137,6 +148,19 @@
 
 /* IoT - internet of things */
 
+#define PKG_USING_PAHOMQTT
+#define PAHOMQTT_PIPE_MODE
+#define PKG_USING_PAHOMQTT_EXAMPLE
+#define RT_PKG_MQTT_THREAD_STACK_SIZE 6144
+#define PKG_PAHOMQTT_SUBSCRIBE_HANDLERS 1
+#define PKG_USING_PAHOMQTT_LATEST
+#define PKG_USING_WEBCLIENT
+#define WEBCLIENT_USING_SAMPLES
+#define WEBCLIENT_NOT_USE_TLS
+#define PKG_USING_WEBCLIENT_LATEST_VERSION
+#define PKG_WEBCLIENT_VER_NUM 0x99999
+#define PKG_USING_CJSON
+#define PKG_USING_CJSON_V102
 
 /* Wi-Fi */
 
@@ -153,14 +177,33 @@
 #define BC26_SAMPLE_STATUS_PIN -1
 #define BC26_SAMPLE_CLIENT_NAME "uart2"
 #define BC26_SAMPLE_RECV_BUFF_LEN 512
-#define PKG_USING_AT_DEVICE_V201
-#define PKG_AT_DEVICE_VER_NUM 0x20001
+#define PKG_USING_AT_DEVICE_LATEST_VERSION
+#define PKG_AT_DEVICE_VER_NUM 0x99999
 
 /* IoT Cloud */
 
+#define PKG_USING_ONENET
+#define PKG_USING_ONENET_SAMPLE
+#define ONENET_USING_MQTT
+#define ONENET_INFO_DEVID "577365251"
+#define ONENET_INFO_AUTH "866971030542174"
+#define ONENET_INFO_APIKEY "dMPiELaGTDNvZpiez/DPH709+ArHU6CiAcaC+LSS2KI="
+#define ONENET_INFO_PROID "305480"
+#define ONENET_MASTER_APIKEY "09Pol/4yuooll7jurkoUFhKlNMp6/G4gFNcoj9CGvJU="
+#define PKG_USING_ONENET_LATEST_VERSION
 
 /* security packages */
 
+#define PKG_USING_MBEDTLS
+
+/* Select Root Certificate */
+
+#define MBEDTLS_AES_ROM_TABLES
+#define MBEDTLS_ECP_WINDOW_SIZE 2
+#define MBEDTLS_SSL_MAX_CONTENT_LEN 3584
+#define MBEDTLS_MPI_MAX_SIZE 1024
+#define MBEDTLS_CTR_DRBG_KEYSIZE 32
+#define PKG_USING_MBEDTLS_V2710
 
 /* language packages */
 
