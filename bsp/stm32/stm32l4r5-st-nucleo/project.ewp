@@ -358,11 +358,8 @@
           <state>$PROJ_DIR$\..\..\..\components\drivers\include</state>
           <state>$PROJ_DIR$\..\..\..\components\net\sal_socket\include\socket</state>
           <state>$PROJ_DIR$\..\..\..\components\libc\compilers\dlib</state>
-          <state>$PROJ_DIR$\packages\mbedtls-v2.7.10\ports\inc</state>
           <state>$PROJ_DIR$\..\..\..\components\libc\compilers\common</state>
-          <state>$PROJ_DIR$\packages\webclient-latest\inc</state>
           <state>$PROJ_DIR$\board\CubeMX_Config\Inc</state>
-          <state>$PROJ_DIR$\packages\pahomqtt-latest\MQTTPacket\src</state>
           <state>$PROJ_DIR$\..\..\..\components\dfs\include</state>
           <state>$PROJ_DIR$\..\libraries\STM32L4xx_HAL\CMSIS\Device\ST\STM32L4xx\Include</state>
           <state>$PROJ_DIR$\packages\at_device-latest\inc</state>
@@ -375,19 +372,16 @@
           <state>$PROJ_DIR$\..\..\..\components\net\sal_socket\include\dfs_net</state>
           <state>$PROJ_DIR$\..\..\..\components\net\at\include</state>
           <state>$PROJ_DIR$\..\libraries\HAL_Drivers</state>
-          <state>$PROJ_DIR$\..\..\..\components\net\sal_socket\include\socket\sys_socket</state>
           <state>$PROJ_DIR$\applications</state>
-          <state>$PROJ_DIR$\packages\cJSON-v1.0.2</state>
+          <state>$PROJ_DIR$\packages\at_device-latest\class\bc26</state>
           <state>$PROJ_DIR$\..\..\..\components\net\sal_socket\include\dfs_net\sys_select</state>
           <state>$PROJ_DIR$\..\..\..\include</state>
-          <state>$PROJ_DIR$\packages\onenet-latest\inc</state>
           <state>$PROJ_DIR$\..\..\..\libcpu\arm\common</state>
           <state>$PROJ_DIR$\..\..\..\libcpu\arm\cortex-m4</state>
           <state>$PROJ_DIR$\..\..\..\components\net\netdev\include</state>
           <state>$PROJ_DIR$\..\..\..\components\net\sal_socket\include</state>
-          <state>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\include</state>
           <state>$PROJ_DIR$\..\..\..\components\net\at\at_socket</state>
-          <state>$PROJ_DIR$\packages\pahomqtt-latest\MQTTClient-RT</state>
+          <state>$PROJ_DIR$\..\..\..\components\net\sal_socket\include\socket\sys_socket</state>
         </option>
         <option>
           <name>CCStdIncCheck</name>
@@ -1448,11 +1442,8 @@
           <state>$PROJ_DIR$\..\..\..\components\drivers\include</state>
           <state>$PROJ_DIR$\..\..\..\components\net\sal_socket\include\socket</state>
           <state>$PROJ_DIR$\..\..\..\components\libc\compilers\dlib</state>
-          <state>$PROJ_DIR$\packages\mbedtls-v2.7.10\ports\inc</state>
           <state>$PROJ_DIR$\..\..\..\components\libc\compilers\common</state>
-          <state>$PROJ_DIR$\packages\webclient-latest\inc</state>
           <state>$PROJ_DIR$\board\CubeMX_Config\Inc</state>
-          <state>$PROJ_DIR$\packages\pahomqtt-latest\MQTTPacket\src</state>
           <state>$PROJ_DIR$\..\..\..\components\dfs\include</state>
           <state>$PROJ_DIR$\..\libraries\STM32L4xx_HAL\CMSIS\Device\ST\STM32L4xx\Include</state>
           <state>$PROJ_DIR$\packages\at_device-latest\inc</state>
@@ -1465,19 +1456,16 @@
           <state>$PROJ_DIR$\..\..\..\components\net\sal_socket\include\dfs_net</state>
           <state>$PROJ_DIR$\..\..\..\components\net\at\include</state>
           <state>$PROJ_DIR$\..\libraries\HAL_Drivers</state>
-          <state>$PROJ_DIR$\..\..\..\components\net\sal_socket\include\socket\sys_socket</state>
           <state>$PROJ_DIR$\applications</state>
-          <state>$PROJ_DIR$\packages\cJSON-v1.0.2</state>
+          <state>$PROJ_DIR$\packages\at_device-latest\class\bc26</state>
           <state>$PROJ_DIR$\..\..\..\components\net\sal_socket\include\dfs_net\sys_select</state>
           <state>$PROJ_DIR$\..\..\..\include</state>
-          <state>$PROJ_DIR$\packages\onenet-latest\inc</state>
           <state>$PROJ_DIR$\..\..\..\libcpu\arm\common</state>
           <state>$PROJ_DIR$\..\..\..\libcpu\arm\cortex-m4</state>
           <state>$PROJ_DIR$\..\..\..\components\net\netdev\include</state>
           <state>$PROJ_DIR$\..\..\..\components\net\sal_socket\include</state>
-          <state>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\include</state>
           <state>$PROJ_DIR$\..\..\..\components\net\at\at_socket</state>
-          <state>$PROJ_DIR$\packages\pahomqtt-latest\MQTTClient-RT</state>
+          <state>$PROJ_DIR$\..\..\..\components\net\sal_socket\include\socket\sys_socket</state>
         </option>
         <option>
           <name>CCStdIncCheck</name>
@@ -2257,335 +2245,14 @@
     <file>
       <name>$PROJ_DIR$\packages\at_device-latest\src\at_device.c</name>
     </file>
-  </group>
-  <group>
-    <name>cJSON</name>
     <file>
-      <name>$PROJ_DIR$\packages\cJSON-v1.0.2\cJSON.c</name>
+      <name>$PROJ_DIR$\packages\at_device-latest\class\bc26\at_device_bc26.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\packages\cJSON-v1.0.2\cJSON_port.c</name>
+      <name>$PROJ_DIR$\packages\at_device-latest\class\bc26\at_socket_bc26.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\packages\cJSON-v1.0.2\cJSON_util.c</name>
-    </file>
-  </group>
-  <group>
-    <name>mbedtls</name>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\aes.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\aesni.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\arc4.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\asn1parse.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\asn1write.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\base64.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\bignum.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\blowfish.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\camellia.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\ccm.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\certs.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\cipher.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\cipher_wrap.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\cmac.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\ctr_drbg.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\debug.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\des.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\dhm.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\ecdh.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\ecdsa.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\ecjpake.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\ecp.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\ecp_curves.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\entropy.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\entropy_poll.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\error.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\gcm.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\havege.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\hmac_drbg.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\md.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\md2.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\md4.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\md5.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\md_wrap.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\memory_buffer_alloc.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\oid.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\padlock.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\pem.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\pk.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\pk_wrap.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\pkcs11.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\pkcs12.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\pkcs5.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\pkparse.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\pkwrite.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\platform.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\ripemd160.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\rsa.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\rsa_internal.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\sha1.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\sha256.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\sha512.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\ssl_cache.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\ssl_ciphersuites.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\ssl_cli.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\ssl_cookie.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\ssl_srv.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\ssl_ticket.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\ssl_tls.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\threading.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\timing.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\version.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\version_features.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\x509.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\x509_create.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\x509_crl.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\x509_crt.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\x509_csr.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\x509write_crt.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\x509write_csr.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\mbedtls\library\xtea.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\ports\src\aes_alt.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\ports\src\arc4_alt.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\ports\src\des_alt.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\ports\src\md5_alt.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\ports\src\rsa_alt.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\ports\src\sha1_alt.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\ports\src\sha256_alt.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\ports\src\sha512_alt.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\ports\src\timing_alt.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\ports\src\tls_certificate.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\ports\src\tls_client.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\ports\src\tls_hardware.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\mbedtls-v2.7.10\ports\src\tls_net.c</name>
-    </file>
-  </group>
-  <group>
-    <name>onenet</name>
-    <file>
-      <name>$PROJ_DIR$\packages\onenet-latest\src\onenet_http.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\onenet-latest\samples\onenet_sample.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\onenet-latest\src\onenet_mqtt.c</name>
-    </file>
-  </group>
-  <group>
-    <name>paho-mqtt</name>
-    <file>
-      <name>$PROJ_DIR$\packages\pahomqtt-latest\MQTTPacket\src\MQTTConnectClient.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\pahomqtt-latest\MQTTPacket\src\MQTTConnectServer.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\pahomqtt-latest\MQTTPacket\src\MQTTDeserializePublish.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\pahomqtt-latest\MQTTPacket\src\MQTTFormat.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\pahomqtt-latest\MQTTPacket\src\MQTTPacket.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\pahomqtt-latest\MQTTPacket\src\MQTTSerializePublish.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\pahomqtt-latest\MQTTPacket\src\MQTTSubscribeClient.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\pahomqtt-latest\MQTTPacket\src\MQTTSubscribeServer.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\pahomqtt-latest\MQTTPacket\src\MQTTUnsubscribeClient.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\pahomqtt-latest\MQTTPacket\src\MQTTUnsubscribeServer.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\pahomqtt-latest\MQTTClient-RT\paho_mqtt_pipe.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\pahomqtt-latest\samples\mqtt_sample.c</name>
-    </file>
-  </group>
-  <group>
-    <name>WebClient</name>
-    <file>
-      <name>$PROJ_DIR$\packages\webclient-latest\src\webclient.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\webclient-latest\samples\webclient_get_sample.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\webclient-latest\samples\webclient_post_sample.c</name>
+      <name>$PROJ_DIR$\packages\at_device-latest\samples\at_sample_bc26.c</name>
     </file>
   </group>
   <group>
@@ -2726,9 +2393,6 @@
       <name>$PROJ_DIR$\..\..\..\components\net\at\src\at_utils.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\..\components\net\at\src\at_cli.c</name>
-    </file>
-    <file>
       <name>$PROJ_DIR$\..\..\..\components\net\at\src\at_client.c</name>
     </file>
     <file>
@@ -2754,9 +2418,6 @@
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\..\components\net\sal_socket\impl\af_inet_at.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\..\components\net\sal_socket\impl\proto_mbedtls.c</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\..\components\net\sal_socket\socket\net_sockets.c</name>
