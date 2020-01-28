@@ -74,34 +74,68 @@
 
 /* Device virtual file system */
 
+#define RT_USING_DFS
+#define DFS_USING_WORKDIR
+#define DFS_FILESYSTEMS_MAX 2
+#define DFS_FILESYSTEM_TYPES_MAX 2
+#define DFS_FD_MAX 16
+#define RT_USING_DFS_DEVFS
 
 /* Device Drivers */
 
 #define RT_USING_DEVICE_IPC
 #define RT_PIPE_BUFSZ 512
+#define RT_USING_SYSTEM_WORKQUEUE
+#define RT_SYSTEM_WORKQUEUE_STACKSIZE 2048
+#define RT_SYSTEM_WORKQUEUE_PRIORITY 23
 #define RT_USING_SERIAL
 #define RT_SERIAL_RB_BUFSZ 64
 #define RT_USING_PIN
+#define RT_USING_RTC
+#define RT_USING_WDT
 
 /* Using USB */
 
 
 /* POSIX layer and C standard library */
 
+#define RT_USING_LIBC
+#define RT_USING_POSIX
 
 /* Network */
 
 /* Socket abstraction layer */
 
+#define RT_USING_SAL
+
+/* protocol stack implement */
+
+#define SAL_USING_AT
+#define SAL_USING_TLS
+#define SAL_USING_POSIX
 
 /* Network interface device */
 
+#define RT_USING_NETDEV
+#define NETDEV_USING_IFCONFIG
+#define NETDEV_USING_PING
+#define NETDEV_USING_NETSTAT
+#define NETDEV_USING_AUTO_DEFAULT
+#define NETDEV_IPV4 1
+#define NETDEV_IPV6 0
 
 /* light weight TCP/IP stack */
 
 
 /* AT commands */
 
+#define RT_USING_AT
+#define AT_DEBUG
+#define AT_USING_CLIENT
+#define AT_CLIENT_NUM_MAX 1
+#define AT_USING_SOCKET
+#define AT_CMD_MAX_LEN 128
+#define AT_SW_VERSION_NUM 0x10300
 
 /* VBUS(Virtual Software BUS) */
 
@@ -113,6 +147,21 @@
 
 /* IoT - internet of things */
 
+#define PKG_USING_PAHOMQTT
+#define PAHOMQTT_PIPE_MODE
+#define PKG_USING_PAHOMQTT_EXAMPLE
+#define PKG_USING_PAHOMQTT_TEST
+#define MQTT_USING_TLS
+#define RT_PKG_MQTT_THREAD_STACK_SIZE 6144
+#define PKG_PAHOMQTT_SUBSCRIBE_HANDLERS 1
+#define MQTT_DEBUG
+#define PKG_USING_PAHOMQTT_LATEST
+#define PKG_USING_WEBCLIENT
+#define WEBCLIENT_DEBUG
+#define WEBCLIENT_USING_SAMPLES
+#define WEBCLIENT_USING_MBED_TLS
+#define PKG_USING_WEBCLIENT_LATEST_VERSION
+#define PKG_WEBCLIENT_VER_NUM 0x99999
 
 /* Wi-Fi */
 
@@ -121,12 +170,40 @@
 
 /* Wiced WiFi */
 
+#define PKG_USING_NETUTILS
+#define PKG_NETUTILS_IPERF
+#define PKG_NETUTILS_NTP
+#define NETUTILS_NTP_TIMEZONE 8
+#define NETUTILS_NTP_HOSTNAME "cn.ntp.org.cn"
+#define NETUTILS_NTP_HOSTNAME2 "ntp.rt-thread.org"
+#define NETUTILS_NTP_HOSTNAME3 "edu.ntp.org.cn"
+#define PKG_USING_NETUTILS_LATEST_VERSION
+#define PKG_USING_AT_DEVICE
+#define AT_DEVICE_USING_BC26
+#define AT_DEVICE_BC26_INIT_ASYN
+#define AT_DEVICE_BC26_SAMPLE
+#define BC26_SAMPLE_POWER_PIN 55
+#define BC26_SAMPLE_STATUS_PIN -1
+#define BC26_SAMPLE_CLIENT_NAME "uart2"
+#define BC26_SAMPLE_RECV_BUFF_LEN 512
+#define PKG_USING_AT_DEVICE_LATEST_VERSION
+#define PKG_AT_DEVICE_VER_NUM 0x99999
 
 /* IoT Cloud */
 
 
 /* security packages */
 
+#define PKG_USING_MBEDTLS
+
+/* Select Root Certificate */
+
+#define MBEDTLS_AES_ROM_TABLES
+#define MBEDTLS_ECP_WINDOW_SIZE 2
+#define MBEDTLS_SSL_MAX_CONTENT_LEN 3584
+#define MBEDTLS_MPI_MAX_SIZE 1024
+#define MBEDTLS_CTR_DRBG_KEYSIZE 32
+#define PKG_USING_MBEDTLS_V2710
 
 /* language packages */
 
@@ -139,6 +216,19 @@
 
 /* system packages */
 
+#define PKG_USING_SYSWATCH
+#define SYSWATCH_USING_TEST
+#define SYSWATCH_EXCEPT_RESOLVE_MODE_2
+#define SYSWATCH_EXCEPT_RESOLVE_MODE 2
+#define SYSWATCH_EXCEPT_TIMEOUT 60
+#define SYSWATCH_EXCEPT_CONFIRM_TMO 15
+#define SYSWATCH_EXCEPT_RESUME_DLY 15
+#define SYSWATCH_THREAD_PRIO 0
+#define SYSWATCH_THREAD_STK_SIZE 512
+#define SYSWATCH_THREAD_NAME "syswatch"
+#define SYSWATCH_WDT_NAME "wdt"
+#define SYSWATCH_WDT_TIMEOUT 5
+#define PKG_USING_SYSWATCH_LATEST_VERSION
 
 /* peripheral libraries and drivers */
 
@@ -148,6 +238,10 @@
 
 /* samples: kernel and components samples */
 
+#define PKG_USING_NETWORK_SAMPLES
+#define PKG_USING_NETWORK_SAMPLES_V030
+#define NETWORK_SAMPLES_USING_TCP_CLIENT
+#define NETWORK_SAMPLES_USING_UDP_CLIENT
 #define SOC_FAMILY_STM32
 #define SOC_SERIES_STM32L4
 
@@ -164,6 +258,10 @@
 #define BSP_USING_GPIO
 #define BSP_USING_UART
 #define BSP_USING_LPUART1
+#define BSP_USING_UART2
+#define BSP_USING_WDT
+#define BSP_USING_ONCHIP_RTC
+#define BSP_RTC_USING_LSE
 
 /* Board extended module Drivers */
 
