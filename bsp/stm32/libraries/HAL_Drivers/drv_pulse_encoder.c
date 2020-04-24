@@ -190,11 +190,17 @@ void pulse_encoder_update_isr(struct stm32_pulse_encoder_device *device)
         __HAL_TIM_CLEAR_IT(&device->tim_handler, TIM_IT_UPDATE);
         if (__HAL_TIM_IS_TIM_COUNTING_DOWN(&device->tim_handler))
         {
-            device->over_under_flowcount--;
+            if (__HAL_TIM_GET_COUNTER(&device->tim_handler) > (AUTO_RELOAD_VALUE/2))//下溢计数值必大于(AUTO_RELOAD_VALUE/2)
+            {
+                device->over_under_flowcount--;
+            }
         }
         else
         {
-            device->over_under_flowcount++;
+            if (__HAL_TIM_GET_COUNTER(&device->tim_handler) < (AUTO_RELOAD_VALUE/2))//上溢计数值必小于(AUTO_RELOAD_VALUE/2)
+            {
+                device->over_under_flowcount++;
+            }
         }
     }
     /* Capture compare 1 event */
