@@ -123,24 +123,26 @@ int at32_flash_write(rt_uint32_t addr, const rt_uint8_t *buf, size_t size)
 int at32_flash_erase(rt_uint32_t addr, size_t size)
 {
     rt_err_t result = RT_EOK;
-    size_t pos = 0;
+    rt_uint32_t end_addr = addr + size;
 
-    if ((addr + size) > AT32_FLASH_END_ADDRESS)
+    if (end_addr > AT32_FLASH_END_ADDRESS)
     {
         LOG_E("ERROR: erase outrange flash size! addr is (0x%p)\n", (void*)(addr + size));
         return -RT_EINVAL;
     }
+    
+    addr &= ~(AT32_FLASH_PAGE_SIZE - 1);
 
     FLASH_Unlock();
 
-    while (pos < size)
+    while (addr < end_addr)
     {
         if (FLASH_ErasePage(addr) != FLASH_PRC_DONE)
         {
             result = -RT_ERROR;
             break;
         }
-        pos += AT32_FLASH_PAGE_SIZE;
+        addr += AT32_FLASH_PAGE_SIZE;
     }
 
     FLASH_Lock();
