@@ -33,16 +33,18 @@
 int at32_flash_read(rt_uint32_t addr, rt_uint8_t *buf, size_t size)
 {
     size_t i;
+    rt_uint8_t *p = (rt_uint8_t *)addr;
+    rt_uint32_t end_addr = addr + size;
 
-    if ((addr + size) > AT32_FLASH_END_ADDRESS)
+    if (end_addr > AT32_FLASH_END_ADDRESS)
     {
-        LOG_E("read outrange flash size! addr is (0x%p)", (void*)(addr + size));
+        LOG_E("read outrange flash size! addr is (0x%p)", (void*)end_addr);
         return -RT_EINVAL;
     }
 
-    for (i = 0; i < size; i++, buf++, addr++)
+    for (i = 0; i<size; i++)
     {
-        *buf = *(rt_uint8_t *) addr;
+        *buf++ = *p++;
     }
 
     return size;
@@ -62,13 +64,13 @@ int at32_flash_read(rt_uint32_t addr, rt_uint8_t *buf, size_t size)
  
 int at32_flash_write(rt_uint32_t addr, const rt_uint8_t *buf, size_t size)
 {
-    size_t i;
     rt_err_t result = RT_EOK;
     rt_uint16_t write_data = 0;
+    rt_uint32_t end_addr = addr + size;
 
-    if ((addr + size) > AT32_FLASH_END_ADDRESS)
+    if (end_addr > AT32_FLASH_END_ADDRESS)
     {
-        LOG_E("ERROR: write outrange flash size! addr is (0x%p)\n", (void*)(addr + size));
+        LOG_E("ERROR: write outrange flash size! addr is (0x%p)\n", (void*)end_addr);
         return -RT_EINVAL;
     }
 
@@ -77,38 +79,45 @@ int at32_flash_write(rt_uint32_t addr, const rt_uint8_t *buf, size_t size)
         LOG_E("write addr must be 2-byte alignment");
         return -RT_EINVAL;
     }
+    
+    if(size % 2 != 0)
+    {
+        LOG_E("write size must be 2 multiples");
+        return -RT_EINVAL;
+    }
 
     FLASH_Unlock();
- 
-    for (i = 0; i<size; i++)
+  
+    while (addr < end_addr)
     {
-        write_data = buf[1];
-        write_data <<= 8;
-        write_data += buf[0];
+        rt_uint8_t *pd = (rt_uint8_t *)&write_data;
         
+        pd[0] = *buf++;
+        pd[1] = *buf++;
+
         if (FLASH_ProgramHalfWord(addr, write_data) != FLASH_PRC_DONE)
-         {
-             result = -RT_ERROR;
-             break;
-         }
-         if (*(rt_uint16_t*)addr != write_data)
-         {
-             LOG_E("ERROR: write data != read data\n");
-             result = -RT_ERROR;
-             break;
-         }
-         addr += 2;
-     }
+        {
+            result = -RT_ERROR;
+            break;
+        }
+        if (*(rt_uint16_t*)addr != write_data)
+        {
+            LOG_E("ERROR: write data != read data\n");
+            result = -RT_ERROR;
+            break;
+        }
+        addr += 2;
+    }
  
-     FLASH_Lock();
+    FLASH_Lock();
      
-     if (result != RT_EOK)
-     {
-         return result;
-     }
+    if (result != RT_EOK)
+    {
+        return result;
+    }
  
-     return size;
- }
+    return size;
+}
  
 /**
  * Erase data on flash.
@@ -123,15 +132,18 @@ int at32_flash_write(rt_uint32_t addr, const rt_uint8_t *buf, size_t size)
 int at32_flash_erase(rt_uint32_t addr, size_t size)
 {
     rt_err_t result = RT_EOK;
+    rt_uint32_t begin_addr = addr;
     rt_uint32_t end_addr = addr + size;
 
     if (end_addr > AT32_FLASH_END_ADDRESS)
     {
-        LOG_E("ERROR: erase outrange flash size! addr is (0x%p)\n", (void*)(addr + size));
+        LOG_E("ERROR: erase outrange flash size! addr is (0x%p)\n", (void*)end_addr);
         return -RT_EINVAL;
     }
     
     addr &= ~(AT32_FLASH_PAGE_SIZE - 1);
+    begin_addr = addr;
+    size = 0;
 
     FLASH_Unlock();
 
@@ -143,6 +155,7 @@ int at32_flash_erase(rt_uint32_t addr, size_t size)
             break;
         }
         addr += AT32_FLASH_PAGE_SIZE;
+        size += AT32_FLASH_PAGE_SIZE;
     }
 
     FLASH_Lock();
@@ -152,7 +165,7 @@ int at32_flash_erase(rt_uint32_t addr, size_t size)
         return result;
     }
 
-    LOG_D("erase done: addr (0x%p), size %d", (void*)addr, size);
+    LOG_D("erase done: addr (0x%p), size %d", (void*)begin_addr, size);
     return size;
 }
  
